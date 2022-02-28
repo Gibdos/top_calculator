@@ -25,7 +25,7 @@ let lastCalc = "";
 // Set up Display function
 function displayCalc() {
 	if (firstNumberDisp === "") {
-		displayResult.textContent = "0";
+		displayResult.innerHTML = "&nbsp;";
 	} else {
 		displayResult.textContent = `${firstNumberDisp} ${operator} ${lastNumberDisp}`;
 	}
