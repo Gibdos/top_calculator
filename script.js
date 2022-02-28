@@ -99,7 +99,7 @@ function fnCalculate() {
 					displayResult.classList.remove("result-displayed");
 				}, 150);
 				break;
-			case "%":
+			case "÷":
 				if (firstNumberDisp === "0" || lastNumberDisp === "0") {
 					displayResult.innerHTML = `Sneaky, aint'cha?`;
 					displayLast.innerHTML = `Press CLEAR to reset.`;
@@ -181,8 +181,9 @@ btnDot.addEventListener("click", () => {
 btnEqual.addEventListener("click", () => {
 	if (firstNumberDisp === "." || lastNumberDisp === ".") {
 		return;
-	} else if (firstNumberDisp != "" && lastNumberDisp != "") {
+	} else if (firstNumberDisp !== "" && lastNumberDisp !== "") {
 		fnCalculate();
+		operator = "";
 		operatorUsed = false;
 		firstNumberDisp = result;
 		lastNumberDisp = "";
@@ -275,7 +276,7 @@ btnMultiply.addEventListener("click", () => {
 	}
 });
 
-// [%] Button
+// [÷] Button
 btnDivide.addEventListener("click", () => {
 	if (
 		firstNumberDisp === "." ||
@@ -287,20 +288,20 @@ btnDivide.addEventListener("click", () => {
 	} else {
 		if (operatorUsed) {
 			if (lastNumberDisp === "") {
-				operator = "%";
+				operator = "÷";
 				operatorUsed = true;
 				displayCalc();
 			} else {
 				fnCalculate();
 				firstNumberDisp = result;
 				lastNumberDisp = "";
-				operator = "%";
+				operator = "÷";
 				operatorUsed = true;
 				displayCalc();
 			}
 		} else {
 			operatorUsed = true;
-			operator = "%";
+			operator = "÷";
 			displayCalc();
 		}
 	}
