@@ -23,7 +23,7 @@ body {
 	display: grid;
 	width: 270px;
 	padding: 2em;
-	background-color: #aaa;
+	background-color: hsl(0, 0%, 67%);
 	border: 1px solid black;
 	border-radius: 0.5em;
 	box-shadow: 2px 2px 2px black;
@@ -33,6 +33,24 @@ body {
 .calc-header {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+}
+
+h1 {
+	grid-column: 1 / -1;
+	text-align: center;
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+
+.last-calc {
+	grid-column: 1 / -1;
+	margin-bottom: 0.5em;
+	padding-right: 0.5em;
+	height: 1em;
+	text-align: right;
+	font-size: 0.8rem;
+	color: hsl(0, 0%, 35%);
+	overflow: hidden;
 }
 
 .display {
@@ -45,6 +63,12 @@ body {
 	padding-right: 0.5em;
 	border: 1px solid black;
 	border-radius: 0.3em;
+	overflow: hidden;
+	transition: all 150ms ease-in-out;
+}
+
+.result-displayed {
+	transform: scale(1.05);
 }
 
 .calc-header-reset {
