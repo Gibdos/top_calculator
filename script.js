@@ -60,7 +60,7 @@ function fnReset() {
 // Calculate Result [EQUALS | OPERATOR] Fn
 function fnCalculate() {
 	if (firstNumberDisp === "." || lastNumberDisp === ".") {
-		fnReset();
+		displayResult.textContent = `Error! Please CLEAR.`;
 	} else {
 		switch (operator) {
 			case "+":
@@ -179,7 +179,9 @@ btnDot.addEventListener("click", () => {
 
 // [EQUALS] Button
 btnEqual.addEventListener("click", () => {
-	if (firstNumberDisp != "" && lastNumberDisp != "") {
+	if (firstNumberDisp === "." || lastNumberDisp === ".") {
+		return;
+	} else if (firstNumberDisp != "" && lastNumberDisp != "") {
 		fnCalculate();
 		operatorUsed = false;
 		firstNumberDisp = result;
@@ -194,7 +196,9 @@ btnEqual.addEventListener("click", () => {
 
 // [+] Button
 btnAdd.addEventListener("click", () => {
-	if (firstNumberDisp === "") {
+	if (firstNumberDisp === "." || lastNumberDisp === ".") {
+		return;
+	} else if (firstNumberDisp === "") {
 	} else {
 		if (operatorUsed) {
 			if (lastNumberDisp === "") {
@@ -219,12 +223,15 @@ btnAdd.addEventListener("click", () => {
 
 // [-] Button
 btnSubtract.addEventListener("click", () => {
-	if (firstNumberDisp === "") {
+	if (firstNumberDisp === "." || lastNumberDisp === ".") {
+		return;
+	} else if (firstNumberDisp === "") {
+		firstNumberDisp = "-";
+		displayCalc();
 	} else {
 		if (operatorUsed) {
 			if (lastNumberDisp === "") {
-				operator = "-";
-				operatorUsed = true;
+				lastNumberDisp = "-";
 				displayCalc();
 			} else {
 				fnCalculate();
@@ -244,7 +251,8 @@ btnSubtract.addEventListener("click", () => {
 
 // [x] Button
 btnMultiply.addEventListener("click", () => {
-	if (firstNumberDisp === "") {
+	if (firstNumberDisp === "." || lastNumberDisp === ".") {
+	} else if (firstNumberDisp === "") {
 	} else {
 		if (operatorUsed) {
 			if (lastNumberDisp === "") {
@@ -269,7 +277,13 @@ btnMultiply.addEventListener("click", () => {
 
 // [%] Button
 btnDivide.addEventListener("click", () => {
-	if (firstNumberDisp === "") {
+	if (
+		firstNumberDisp === "." ||
+		lastNumberDisp === "." ||
+		firstNumberDisp === "0" ||
+		lastNumberDisp === "0"
+	) {
+	} else if (firstNumberDisp === "") {
 	} else {
 		if (operatorUsed) {
 			if (lastNumberDisp === "") {
