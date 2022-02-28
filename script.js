@@ -44,7 +44,7 @@ function fnNumber(number) {
 
 // Clear the Display [CLEAR] Fn
 function fnReset() {
-	displayResult.textContent = 0;
+	displayResult.innerHTML = `&nbsp;`;
 	lastCalc = "";
 	displayLast.textContent = "";
 	display = "";
