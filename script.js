@@ -59,50 +59,12 @@ function fnReset() {
 
 // Calculate Result [EQUALS | OPERATOR] Fn
 function fnCalculate() {
-	switch (operator) {
-		case "+":
-			result = parseFloat(firstNumberDisp) + parseFloat(lastNumberDisp);
-			lastCalc = `${firstNumberDisp} ${operator} ${lastNumberDisp} = ${result}`;
-			displayResult.innerHTML = result;
-			displayLast.innerHTML = lastCalc;
-			firstNumDec = false;
-			lastNumDec = false;
-			displayResult.classList.add("result-displayed");
-			setTimeout(() => {
-				displayResult.classList.remove("result-displayed");
-			}, 150);
-			break;
-		case "-":
-			result = parseFloat(firstNumberDisp) - parseFloat(lastNumberDisp);
-			lastCalc = `${firstNumberDisp} ${operator} ${lastNumberDisp} = ${result}`;
-			displayResult.innerHTML = result;
-			displayLast.innerHTML = lastCalc;
-			firstNumDec = false;
-			lastNumDec = false;
-			displayResult.classList.add("result-displayed");
-			setTimeout(() => {
-				displayResult.classList.remove("result-displayed");
-			}, 150);
-			break;
-		case "x":
-			result = parseFloat(firstNumberDisp) * parseFloat(lastNumberDisp);
-			lastCalc = `${firstNumberDisp} ${operator} ${lastNumberDisp} = ${result}`;
-			displayResult.innerHTML = result;
-			displayLast.innerHTML = lastCalc;
-			firstNumDec = false;
-			lastNumDec = false;
-			displayResult.classList.add("result-displayed");
-			setTimeout(() => {
-				displayResult.classList.remove("result-displayed");
-			}, 150);
-			break;
-		case "%":
-			if (firstNumberDisp === "0" || lastNumberDisp === "0") {
-				displayResult.innerHTML = `Sneaky, aint'cha?`;
-				displayLast.innerHTML = `Press CLEAR to reset.`;
-				break;
-			} else {
-				result = parseFloat(firstNumberDisp) / parseFloat(lastNumberDisp);
+	if (firstNumberDisp === "." || lastNumberDisp === ".") {
+		fnReset();
+	} else {
+		switch (operator) {
+			case "+":
+				result = parseFloat(firstNumberDisp) + parseFloat(lastNumberDisp);
 				lastCalc = `${firstNumberDisp} ${operator} ${lastNumberDisp} = ${result}`;
 				displayResult.innerHTML = result;
 				displayLast.innerHTML = lastCalc;
@@ -113,7 +75,49 @@ function fnCalculate() {
 					displayResult.classList.remove("result-displayed");
 				}, 150);
 				break;
-			}
+			case "-":
+				result = parseFloat(firstNumberDisp) - parseFloat(lastNumberDisp);
+				lastCalc = `${firstNumberDisp} ${operator} ${lastNumberDisp} = ${result}`;
+				displayResult.innerHTML = result;
+				displayLast.innerHTML = lastCalc;
+				firstNumDec = false;
+				lastNumDec = false;
+				displayResult.classList.add("result-displayed");
+				setTimeout(() => {
+					displayResult.classList.remove("result-displayed");
+				}, 150);
+				break;
+			case "x":
+				result = parseFloat(firstNumberDisp) * parseFloat(lastNumberDisp);
+				lastCalc = `${firstNumberDisp} ${operator} ${lastNumberDisp} = ${result}`;
+				displayResult.innerHTML = result;
+				displayLast.innerHTML = lastCalc;
+				firstNumDec = false;
+				lastNumDec = false;
+				displayResult.classList.add("result-displayed");
+				setTimeout(() => {
+					displayResult.classList.remove("result-displayed");
+				}, 150);
+				break;
+			case "%":
+				if (firstNumberDisp === "0" || lastNumberDisp === "0") {
+					displayResult.innerHTML = `Sneaky, aint'cha?`;
+					displayLast.innerHTML = `Press CLEAR to reset.`;
+					break;
+				} else {
+					result = parseFloat(firstNumberDisp) / parseFloat(lastNumberDisp);
+					lastCalc = `${firstNumberDisp} ${operator} ${lastNumberDisp} = ${result}`;
+					displayResult.innerHTML = result;
+					displayLast.innerHTML = lastCalc;
+					firstNumDec = false;
+					lastNumDec = false;
+					displayResult.classList.add("result-displayed");
+					setTimeout(() => {
+						displayResult.classList.remove("result-displayed");
+					}, 150);
+					break;
+				}
+		}
 	}
 }
 
