@@ -14,7 +14,6 @@ const btnDivide = document.querySelector(".divide");
 // Set up start state
 let firstNumberDisp = "";
 let firstNumDec = false;
-let lastNumber = 0;
 let lastNumberDisp = "";
 let lastNumDec = false;
 let operator = "";
@@ -99,7 +98,7 @@ function fnCalculate() {
 			break;
 		case "%":
 			if (firstNumberDisp === "0" || lastNumberDisp === "0") {
-				displayResult.innerHTML = `Sneaky, aint'cha!`;
+				displayResult.innerHTML = `Sneaky, aint'cha?`;
 				displayLast.innerHTML = `Press CLEAR to reset.`;
 				break;
 			} else {
@@ -189,6 +188,7 @@ btnEqual.addEventListener("click", () => {
 	}
 });
 
+// [+] Button
 btnAdd.addEventListener("click", () => {
 	if (firstNumberDisp === "") {
 	} else {
@@ -213,6 +213,7 @@ btnAdd.addEventListener("click", () => {
 	}
 });
 
+// [-] Button
 btnSubtract.addEventListener("click", () => {
 	if (firstNumberDisp === "") {
 	} else {
@@ -237,6 +238,7 @@ btnSubtract.addEventListener("click", () => {
 	}
 });
 
+// [x] Button
 btnMultiply.addEventListener("click", () => {
 	if (firstNumberDisp === "") {
 	} else {
@@ -261,6 +263,7 @@ btnMultiply.addEventListener("click", () => {
 	}
 });
 
+// [%] Button
 btnDivide.addEventListener("click", () => {
 	if (firstNumberDisp === "") {
 	} else {
@@ -285,6 +288,7 @@ btnDivide.addEventListener("click", () => {
 	}
 });
 
+// [1|2|3|4|5|6|7|8|9|0] Button
 btnDigit.forEach((e) => {
 	e.addEventListener("click", () => {
 		fnNumber(e.textContent);
@@ -305,7 +309,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case "2":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -316,7 +320,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case "3":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -327,7 +331,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case "4":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -338,7 +342,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case "5":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -349,7 +353,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case "6":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -360,7 +364,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case "7":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -371,7 +375,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case "8":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -382,7 +386,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case "9":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -393,7 +397,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case "0":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -404,7 +408,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case ".":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -415,7 +419,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case "Enter":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -426,7 +430,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case "+":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -437,7 +441,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case "-":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -448,7 +452,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case "*":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -459,7 +463,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case "/":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -470,7 +474,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case "Backspace":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -481,7 +485,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 		case "Escape":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
@@ -492,7 +496,7 @@ window.addEventListener("keydown", (e) => {
 				document
 					.querySelector(`[data-key='${keyPressed}']`)
 					.classList.remove("animation");
-			}, 250);
+			}, 50);
 			break;
 	}
 });
