@@ -13,6 +13,13 @@ body {
 	height: 100vh;
 }
 
+.githubLogo {
+	position: absolute;
+	bottom: 2em;
+	left: 2em;
+	fill: white;
+}
+
 .container {
 	display: grid;
 	height: 100vh;
@@ -159,4 +166,22 @@ h1 {
 
 .add:hover {
 	background-color: hsl(17, 100%, 84%);
+}
+
+.animation {
+	animation: forwards 50ms linear buttonPressed;
+}
+
+@keyframes buttonPressed {
+	from {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+		box-shadow: 1px 1px 1px black;
+	}
+	to {
+		transform: scale(1);
+	}
 }

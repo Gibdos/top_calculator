@@ -298,57 +298,201 @@ window.addEventListener("keydown", (e) => {
 	switch (keyPressed) {
 		case "1":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case "2":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case "3":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case "4":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case "5":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case "6":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case "7":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case "8":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case "9":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case "0":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case ".":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case "Enter":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case "+":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case "-":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case "*":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case "/":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case "Backspace":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 		case "Escape":
 			document.querySelector(`[data-key='${keyPressed}']`).click();
+			document
+				.querySelector(`[data-key='${keyPressed}']`)
+				.classList.add("animation");
+			setTimeout(() => {
+				document
+					.querySelector(`[data-key='${keyPressed}']`)
+					.classList.remove("animation");
+			}, 250);
 			break;
 	}
 });
