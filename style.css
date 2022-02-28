@@ -1,0 +1,138 @@
+*,
+*::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Ubuntu", sans-serif;
+	background: #333;
+	width: 100%;
+	height: 100vh;
+}
+
+.container {
+	display: grid;
+	height: 100vh;
+	place-content: center;
+}
+
+.calculator {
+	display: grid;
+	width: 270px;
+	padding: 2em;
+	background-color: #aaa;
+	border: 1px solid black;
+	border-radius: 0.5em;
+	box-shadow: 2px 2px 2px black;
+	max-width: 350px;
+}
+
+.calc-header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.display {
+	width: 100%;
+	background: white;
+	color: black;
+	grid-column-start: 1;
+	grid-column-end: -1;
+	text-align: right;
+	padding-right: 0.5em;
+	border: 1px solid black;
+	border-radius: 0.3em;
+}
+
+.calc-header-reset {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-start: 1;
+	grid-column-end: -1;
+	text-align: center;
+	gap: 1em;
+}
+
+.reset {
+	background-color: hsl(16, 100%, 66%);
+	border: 1px solid black;
+	border-radius: 0.3em;
+	padding: 0.5em;
+	margin: 1em 0;
+}
+
+.reset:hover {
+	background-color: hsl(16, 100%, 76%);
+	cursor: pointer;
+}
+
+.delete {
+	background-color: hsl(348, 83%, 47%);
+	border: 1px solid black;
+	border-radius: 0.3em;
+	padding: 0.5em;
+	margin: 1em 0;
+}
+
+.delete:hover {
+	background-color: hsl(348, 83%, 57%);
+	cursor: pointer;
+}
+
+.calc-pad {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-start: 1;
+	grid-column-end: -1;
+	place-items: center;
+	gap: 0.5em;
+	text-align: center;
+}
+
+.button {
+	background: hsl(180, 100%, 50%);
+	border: 1px solid black;
+	border-radius: 0.3em;
+	padding: 0.5em;
+	width: 100%;
+}
+
+.button:hover {
+	background-color: hsl(180, 100%, 40%);
+	cursor: pointer;
+}
+
+.divide {
+	background-color: hsl(33, 60%, 50%);
+}
+
+.divide:hover {
+	background-color: hsl(33, 60%, 60%);
+}
+
+.multiply {
+	background-color: hsl(219, 79%, 66%);
+}
+
+.multiply:hover {
+	background-color: hsl(219, 79%, 76%);
+}
+
+.subtract {
+	background-color: hsl(0, 100%, 74%);
+}
+
+.subtract:hover {
+	background-color: hsl(0, 100%, 84%);
+}
+
+.add {
+	background-color: hsl(17, 100%, 74%);
+}
+
+.add:hover {
+	background-color: hsl(17, 100%, 84%);
+}
