@@ -12,7 +12,6 @@ const btnMultiply = document.querySelector(".multiply");
 const btnDivide = document.querySelector(".divide");
 
 // Set up start state
-let firstNumber = 0;
 let firstNumberDisp = "";
 let firstNumDec = false;
 let lastNumber = 0;
@@ -50,10 +49,8 @@ function fnReset() {
 	lastCalc = "";
 	displayLast.textContent = "";
 	display = "";
-	firstNumber = 0;
 	firstNumberDisp = "";
 	firstNumDec = false;
-	lastNumber = 0;
 	lastNumberDisp = "";
 	lastNumDec = false;
 	operator = "";
@@ -293,3 +290,65 @@ btnDigit.forEach((e) => {
 		fnNumber(e.textContent);
 	});
 }, 1);
+
+// Keyboard support
+window.addEventListener("keydown", (e) => {
+	let keyPressed = e.key;
+	let keyValue = document.querySelector(`[data-key='${keyPressed}']`);
+	switch (keyPressed) {
+		case "1":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case "2":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case "3":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case "4":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case "5":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case "6":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case "7":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case "8":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case "9":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case "0":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case ".":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case "Enter":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case "+":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case "-":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case "*":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case "/":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case "Backspace":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+		case "Escape":
+			document.querySelector(`[data-key='${keyPressed}']`).click();
+			break;
+	}
+});
