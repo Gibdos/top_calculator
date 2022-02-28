@@ -179,7 +179,11 @@ btnDot.addEventListener("click", () => {
 
 // [EQUALS] Button
 btnEqual.addEventListener("click", () => {
-	if (firstNumberDisp === "." || lastNumberDisp === ".") {
+	if (
+		firstNumberDisp === "." ||
+		lastNumberDisp === "." ||
+		firstNumberDisp === "-"
+	) {
 		return;
 	} else if (
 		firstNumberDisp !== "" &&
@@ -201,7 +205,12 @@ btnEqual.addEventListener("click", () => {
 
 // [+] Button
 btnAdd.addEventListener("click", () => {
-	if (firstNumberDisp === "." || lastNumberDisp === ".") {
+	if (
+		firstNumberDisp === "." ||
+		lastNumberDisp === "." ||
+		firstNumberDisp === "-" ||
+		lastNumberDisp === "-"
+	) {
 		return;
 	} else if (firstNumberDisp === "") {
 	} else {
@@ -228,7 +237,12 @@ btnAdd.addEventListener("click", () => {
 
 // [-] Button
 btnSubtract.addEventListener("click", () => {
-	if (firstNumberDisp === "." || lastNumberDisp === ".") {
+	if (
+		firstNumberDisp === "." ||
+		lastNumberDisp === "." ||
+		lastNumberDisp === "-" ||
+		firstNumberDisp === "-"
+	) {
 		return;
 	} else if (firstNumberDisp === "") {
 		firstNumberDisp = "-";
@@ -259,7 +273,12 @@ btnSubtract.addEventListener("click", () => {
 
 // [x] Button
 btnMultiply.addEventListener("click", () => {
-	if (firstNumberDisp === "." || lastNumberDisp === ".") {
+	if (
+		firstNumberDisp === "." ||
+		lastNumberDisp === "." ||
+		lastNumberDisp === "-" ||
+		firstNumberDisp === "-"
+	) {
 	} else if (firstNumberDisp === "") {
 	} else {
 		if (operatorUsed) {
@@ -289,7 +308,9 @@ btnDivide.addEventListener("click", () => {
 		firstNumberDisp === "." ||
 		lastNumberDisp === "." ||
 		firstNumberDisp === "0" ||
-		lastNumberDisp === "0"
+		lastNumberDisp === "0" ||
+		lastNumberDisp === "-" ||
+		firstNumberDisp === "-"
 	) {
 	} else if (firstNumberDisp === "") {
 	} else {
