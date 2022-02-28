@@ -12,7 +12,7 @@ A simple Calculator written in HTML, CSS and JavaScript. Based on the "The Odin 
 - [x] Addition / Subtraction / Multiplication / Division
 - [x] CLEAR button to reset the calculator
 - [x] DEL button to delete last entry
-- [ ] Keyboard control
+- [x] Keyboard control
 
 ## Image
 
